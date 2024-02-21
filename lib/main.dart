@@ -115,6 +115,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     Expanded(
                       flex: 1,
                       child: Container(
+                        height: double.infinity,
+                        width: double.infinity,
                         // padding: const EdgeInsets.all(20.0),
                         decoration: BoxDecoration(
                           color: _running ? Colors.red : Colors.green,
@@ -144,13 +146,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         child: Align(
                           alignment: Alignment.center,
-                          child: TextButton(
-                            onPressed: () {
-                              reset();
-                            },
-                            child: const Text(
-                              "Reset",
-                              style: TextStyle(fontSize: 50),
+                          child: SizedBox(
+                            height: double.infinity,
+                            child: TextButton(
+                              onPressed: () {
+                                reset();
+                              },
+                              child: const Text(
+                                "Reset",
+                                style: TextStyle(fontSize: 50),
+                              ),
                             ),
                           ),
                         ),
