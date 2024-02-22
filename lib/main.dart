@@ -124,13 +124,17 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         child: Align(
                           alignment: Alignment.center,
-                          child: TextButton(
-                            onPressed: () {
-                              _running ? stop() : start();
-                            },
-                            child: Text(
-                              _running ? "Stop" : "Start",
-                              style: const TextStyle(fontSize: 50),
+                          child: SizedBox(
+                            height: double.infinity,
+                            child: TextButton(
+                              onPressed: () {
+                                _running ? stop() : start();
+                              },
+                              child: Text(
+                                _running ? "Stop" : "Start",
+                                style: const TextStyle(
+                                    color: Colors.black, fontSize: 50),
+                              ),
                             ),
                           ),
                         ),
@@ -154,7 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               },
                               child: const Text(
                                 "Reset",
-                                style: TextStyle(fontSize: 50),
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 50),
                               ),
                             ),
                           ),
