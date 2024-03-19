@@ -33,18 +33,17 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _countup = -5;
-  int _countdown = 155;
+  int _delay = 500;
+  int _maxtul = 150;
+  int _countdown = 0;
+  int _countup = 0;
   bool _running = false;
   late Timer _timer;
 
   @override
   void initState() {
     super.initState();
-    setState(() {
-      _countup = -5;
-      _countdown = 155;
-    });
+    reset();
   }
 
   void start() {
@@ -70,8 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
     }
     setState(() {
       _running = false;
-      _countup = -5;
-      _countdown = 155;
+      _countup = -_delay;
+      _countdown = _delay + _maxtul;
     });
   }
 
