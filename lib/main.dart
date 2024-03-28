@@ -33,7 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _delay = 500;
+  int _delay = 5;
   int _maxtul = 150;
   int _countdown = 0;
   int _countup = 0;
